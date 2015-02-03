@@ -41,7 +41,7 @@ case "$2" in
 			NO_PROXY=$NO_PROXY_DIRECT
 		fi
 
-		sudo sed "s/^NoProxy.*$/NoProxy\t\t$NO_PROXY/g" -i $CNTLM_CONF
-		sudo invoke-rc.d cntlm restart
+		sed "s/^NoProxy.*$/NoProxy\t\t$NO_PROXY/g" -i $CNTLM_CONF
+		invoke-rc.d cntlm restart
 		;;
 esac
