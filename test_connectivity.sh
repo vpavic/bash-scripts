@@ -13,6 +13,6 @@ declare -A servers
 
 for server in "${!servers[@]}"; do
 	echo "testing connectivity to: $server (${servers["$server"]})";
-	nc -z -w 10 -v ${servers["$server"]};
+	nc -z -w 10 -v "${servers["$server"]}";
 	echo "";
 done
