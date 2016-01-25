@@ -30,7 +30,7 @@ if [ ! -f $CNTLM_CONF ]; then
 fi
 
 case "$2" in
-	up|vpn-up)
+	up|down|vpn-up|vpn-down)
 		hostname -I | grep -q $COMPANY_SUBNET
 
 		if [ $? -eq 0 ]; then
