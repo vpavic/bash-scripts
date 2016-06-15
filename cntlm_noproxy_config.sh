@@ -42,6 +42,6 @@ case "$2" in
 		fi
 
 		sed "s/^NoProxy.*$/NoProxy\t\t$NO_PROXY/g" -i $CNTLM_CONF
-		invoke-rc.d cntlm restart
+		service cntlm restart
 		;;
 esac
